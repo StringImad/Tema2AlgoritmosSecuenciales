@@ -5,6 +5,7 @@
  */
 package algoritmosSecuenciales;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -12,15 +13,18 @@ import java.util.Scanner;
  * @author MSI
  */
 public class Ej04 {
+
     public static void main(String[] args) {
-                //Declaracion de variables 
+        //Declaracion de variables 
         double gramosUsuario;
         //La variable gramoEnLibra equivale al valor real de 1 gramo en libras
         final double gramoEnLibra = 0.00220462;
         //En esta variable guardaremos la cantidad de libras que equivalen los gramos
         double cantidadConvertida;
-        //Declaracion del Scanner
+        //Declaracion de objetos
         Scanner teclado = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("#.00");
+
         //Mensaje que se muestra por panatalla informativo
         System.out.println("Introduce la cantidad de gramos que ha traido el usuario");
         gramosUsuario = teclado.nextDouble();
@@ -28,7 +32,7 @@ public class Ej04 {
         cantidadConvertida = gramosUsuario * gramoEnLibra;
         //Mostramos por pantalla la cantidad antes de ser convertida y despues
         System.out.println("La cantidad introducida es " + gramosUsuario + " gramos "
-                + "que equivale a " + cantidadConvertida + " libras");
+                + "que equivale a " + df.format(cantidadConvertida) + " libras");
 
     }
 }

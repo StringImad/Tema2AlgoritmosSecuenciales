@@ -5,6 +5,7 @@
  */
 package algoritmosSecuenciales;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -17,12 +18,14 @@ public class Ej05 {
         //Declaracion de variables 
         final double cobroFijo = 150; //Euros
         final double precioKmRecorrido = 0.153; //Centimos
-        
+
         double cantidadTotalViaje;
         //En esta variable guardaremos la cantidad de km que introduce el usuario
         double kilometrosPorRecorrer;
-        //Declaracion del Scanner
+        //Declaracion de objetos
         Scanner teclado = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("#.00");
+
         //Mensaje que se muestra por panatalla informativo
         System.out.println("Introduce los kilometros que va a realiar el usuario");
         kilometrosPorRecorrer = teclado.nextDouble();
@@ -30,7 +33,7 @@ public class Ej05 {
         cantidadTotalViaje = (precioKmRecorrido * kilometrosPorRecorrer) + cobroFijo;
         //Mostramos por pantalla la cantidad antes de ser convertida y despues
         System.out.println("Los km introducidos son " + kilometrosPorRecorrer + " km "
-                + " el servicio cuesta " + cantidadTotalViaje + " euros");
+                + " el servicio cuesta " + df.format(cantidadTotalViaje) + " euros");
 
     }
 }

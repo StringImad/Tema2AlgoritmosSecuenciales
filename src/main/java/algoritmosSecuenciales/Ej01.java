@@ -4,6 +4,7 @@
  */
 package algoritmosSecuenciales;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -19,8 +20,10 @@ public class Ej01 {
         double rupiaEnEuro = 86.57;
         //En esta variable guardaremos la cantidad de rupias que equivalen los euros
         double cantidadConvertida;
-        //Declaracion del Scanner
+        //Declaracion de objetos
         Scanner teclado = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("#.00");
+
         //Mensaje que se muestra por panatalla informativo
         System.out.println("Introduce la cantidad de dinero que ha traido en euros ");
         eurosUsuario = teclado.nextDouble();
@@ -28,7 +31,7 @@ public class Ej01 {
         cantidadConvertida = eurosUsuario * rupiaEnEuro;
         //Mostramos por pantalla la cantidad antes de ser convertida y despues
         System.out.println("La cantidad introducida es " + eurosUsuario + "€ "
-                + "que equivale a " + cantidadConvertida + " Rupias indias");
+                + "que equivale a " + df.format(cantidadConvertida) + " Rupias indias");
 
     }
 }
