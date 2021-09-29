@@ -16,8 +16,8 @@ public class Ej05 {
 
     public static void main(String[] args) {
         //Declaracion de variables 
-        final double cobroFijo = 150; //Euros
-        final double precioKmRecorrido = 0.153; //Centimos
+        final double COBRO_FIJO = 150; //Euros
+        final double PRECIO_KM_RECORRIDO = 0.153; //Centimos
 
         double cantidadTotalViaje;
         //En esta variable guardaremos la cantidad de km que introduce el usuario
@@ -30,7 +30,7 @@ public class Ej05 {
         System.out.println("Introduce los kilometros que va a realiar el usuario");
         kilometrosPorRecorrer = teclado.nextDouble();
         //Guardamos en cantidadTotalViaje la multiplicacion de los km por el precio por km  y le sumamos la cantidad fija
-        cantidadTotalViaje = (precioKmRecorrido * kilometrosPorRecorrer) + cobroFijo;
+        cantidadTotalViaje = (PRECIO_KM_RECORRIDO * kilometrosPorRecorrer) + COBRO_FIJO;
         //Mostramos por pantalla la cantidad antes de ser convertida y despues
         System.out.println("Los km introducidos son " + kilometrosPorRecorrer + " km "
                 + " el servicio cuesta " + df.format(cantidadTotalViaje) + " euros");
