@@ -18,7 +18,7 @@ public class Ej08 {
         String precioArticulo;
         boolean repetir = true;
         //Constantes
-        final double IVA = 16;
+        final int IVA = 16;
         String ivaManual;
         double precioFinal;
 
